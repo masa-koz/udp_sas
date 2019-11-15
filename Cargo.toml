@@ -20,4 +20,7 @@ cc = "1.0"
 
 [dependencies]
 libc  = "0.2"
-os_socketaddr = "0.1"
+os_socketaddr = { path = "../os_socketaddr" }
+
+[target.'cfg(target_family="windows")'.dependencies]
+winapi = { version = "0.3", features = ["winsock2", "ws2def", "ws2ipdef", "ws2tcpip"] }
