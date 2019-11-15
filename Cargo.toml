@@ -20,7 +20,7 @@ cc = "1.0"
 
 [dependencies]
 libc  = "0.2"
-os_socketaddr = { path = "../os_socketaddr" }
+os_socketaddr = { git = "https://github.com/masa-koz/os_socketaddr", branch = "kozuka-add_support_windows"  }
 
 [target.'cfg(target_family="windows")'.dependencies]
 winapi = { version = "0.3", features = ["winsock2", "ws2def", "ws2ipdef", "ws2tcpip"] }
